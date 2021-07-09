@@ -1,0 +1,16 @@
+#网关
+
+server:
+  port: 8030
+spring:
+  application:
+    name: gatway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    provider: /p/**   #对应 eurekaclient 中的服务提供者设置映射
+
